@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.bafika.adbfian.tribasaapp.TerjemahanIndo">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/material_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <Button
+            android:id="@+id/btnPilihBhs"
+            android:onClick="getBahasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparent"
+            android:textColor="@color/white"
+            android:text="@string/bahasaIndonesia"
+            android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"/>
+        </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1">
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/deleteChar"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:background="@color/white"
+                android:onClick="ClearChar"
+                android:src="@drawable/ic_clear_black_24dp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/terIndo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/inputtext"
+                android:hint="Artikan kata"
+                android:inputType="textCapSentences"
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/batas_10"
+                android:textColor="@color/blue_grey"
+                android:textColorHint="@color/blue_grey" />
+
+
+            <ImageButton
+                android:id="@+id/terArti"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:onClick="getArti"
+                android:src="@drawable/ic_send_black_24dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginBottom="@dimen/batas_5"
+        android:layout_marginLeft="@dimen/batas_10"
+        android:layout_marginRight="@dimen/batas_10"
+        android:layout_marginTop="@dimen/batas_12"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardCornerRadius="5dp"
+        card_view:contentPadding="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bahasaNgoko"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/terNgoko"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:layout_marginTop="@dimen/batas_10"
+                    android:textAllCaps="true"
+                    android:textSize="9pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bahasaKromo"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/terKromo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/batas_10"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="9pt" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
